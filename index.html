@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Orbits - Pioneering the Future of Space Exploration</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons CDN -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-xl border-b border-sky-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2 text-2xl font-extrabold text-sky-400">
+                    <!-- Inline SVG for Agency Logo -->
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-500" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L4 5V19L12 22L20 19V5L12 2ZM12 4.1L18 6.5V17.5L12 19.9L6 17.5V6.5L12 4.1Z"/>
+                        <circle cx="12" cy="12" r="4"/>
+                    </svg> --><i class="fa-solid fa-rocket"></i>
+                    <p><span class="text-blue-500">Quantum</span> Orbits</p>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 text-lg font-medium">
+                    <a id="nav-home" class="scroll-link text-white hover:text-sky-400 transition duration-300" data-target="hero-section">Home</a>
+                    <a id="nav-missions" class="scroll-link text-white hover:text-sky-400 transition duration-300" data-target="missions-section">Missions</a>
+                    <a id="nav-technology" class="scroll-link text-white hover:text-sky-400 transition duration-300" data-target="technology-section">Technology</a>
+                    <a id="nav-leadership" class="scroll-link text-white hover:text-sky-400 transition duration-300" data-target="leadership-section">Leadership</a>
+                    <a id="nav-calculator" class="scroll-link text-white hover:text-sky-400 transition duration-300" data-target="cost-calculator-section">Costing</a>
+                    <a id="nav-dashboard" class="scroll-link text-white hover:text-sky-400 transition duration-300" data-target="dashboard-section">Dashboard</a>
+                    <a id="nav-careers" class="scroll-link text-white hover:text-sky-400 transition duration-300" data-target="careers-section">Careers</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-lg text-sky-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-500" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/90 border-t border-sky-700/50">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a class="mobile-scroll-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" data-target="hero-section">Home</a>
+                <a class="mobile-scroll-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" data-target="missions-section">Missions</a>
+                <a class="mobile-scroll-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" data-target="technology-section">Technology</a>
+                <a class="mobile-scroll-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" data-target="leadership-section">Leadership</a>
+                <a class="mobile-scroll-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" data-target="cost-calculator-section">Costing</a>
+                <a class="mobile-scroll-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" data-target="dashboard-section">Dashboard</a>
+                <a class="mobile-scroll-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" data-target="careers-section">Careers</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero-section" class="relative flex items-center justify-center min-h-screen pt-16 text-center text-white">
+            
+            <!-- ANIMAION 1: Rocket Launch -->
+            <div class="rocket">
+                <div class="rocket-body"></div>
+                <div class="rocket-flame"></div>
+            </div>
+            
+            <!-- ANIMAION 2: Orbital Object -->
+            <div class="orbital-object"></div>
+
+            <div class="max-w-4xl mx-auto p-8 z-10">
+                <p class="text-xl sm:text-2xl font-medium tracking-widest uppercase text-sky-400 mb-4 animate-pulse">Quantum Orbits Space Agency</p>
+                <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black mb-6 leading-tight">
+                    Pioneering the <span class="text-sky-300 drop-shadow-lg">Future</span> of Space Exploration
+                </h1>
+                <p class="text-lg sm:text-xl mb-10 max-w-2xl mx-auto opacity-80">
+                    From deep-space probes to permanent off-world settlements, we push the boundaries of human achievement and scientific discovery.
+                </p>
+                <a href="#missions-section" class="inline-block px-10 py-4 text-lg font-bold text-white bg-sky-600 rounded-full shadow-lg hover:bg-sky-700 transition duration-300 transform hover:scale-105">
+                    Explore Our Missions
+                </a>
+            </div>
+        </section>
+
+        <!-- Missions Section -->
+        <section id="missions-section" class="py-20 bg-gray-900/90">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center mb-4 text-white">Our Current Missions</h2>
+                <p class="text-xl text-center mb-12 text-gray-400 max-w-3xl mx-auto">Driving humanity's presence beyond Earth orbit with ambitious, strategic programs.</p>
+
+                <!-- Mission Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Mission 1: Mars Colonization Initiative -->
+                    <div class="mission-card bg-gray-800 rounded-xl p-6 shadow-2xl border border-sky-800/50">
+                        <div class="flex items-center justify-center h-16 w-16 bg-sky-500 rounded-full mb-4">
+                            <!-- Icon for Mars -->
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17.1 9.9L12.5 14.5L11.5 13.5L10.9 14.1L12.5 15.7L18.1 10.1L17.1 9.9Z"/>
+                            </svg> -->
+                            <i class="fa-solid fa-shuttle-space"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-sky-300 mb-2">Project DALAL</h3>
+                        <p class="text-gray-400 text-sm">Target: Mars | Status: In Development (ETA 2030)</p>
+                        <p class="mt-4 text-gray-300">Establishing the first permanent human habitat on the Martian surface. This mission is focused on sustainability and self-sufficiency.</p>
+                        <a href="#" class="mt-4 inline-block text-sky-400 font-medium hover:text-sky-300">View Details &rarr;</a>
+                    </div>
+
+                    <!-- Mission 2: Europa Ice Probe -->
+                    <div class="mission-card bg-gray-800 rounded-xl p-6 shadow-2xl border border-sky-800/50">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-500 rounded-full mb-4">
+                            <!-- Icon for Probe -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 4V12H20C20 7.58 16.42 4 12 4Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-sky-300 mb-2">DeepDive-7</h3>
+                        <p class="text-gray-400 text-sm">Target: Jupiter's Moon Europa | Status: Active (Launched 2025)</p>
+                        <p class="mt-4 text-gray-300">A sub-surface robotic mission designed to drill through Europa's ice sheet to search for biosignatures in the ocean below.</p>
+                        <a href="#" class="mt-4 inline-block text-sky-400 font-medium hover:text-sky-300">View Details &rarr;</a>
+                    </div>
+
+                    <!-- Mission 3: Lunar Mining Base -->
+                    <div class="mission-card bg-gray-800 rounded-xl p-6 shadow-2xl border border-sky-800/50">
+                        <div class="flex items-center justify-center h-16 w-16 bg-yellow-500 rounded-full mb-4">
+                            <!-- Icon for Moon/Mining -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 20.94V3.06C17.15 3.56 20.44 6.85 20.94 11H13V20.94ZM11 3.06V20.94C6.85 20.44 3.56 17.15 3.06 13H11V3.06Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-sky-300 mb-2">Luminaris Base</h3>
+                        <p class="text-gray-400 text-sm">Target: Lunar South Pole | Status: Phase II (Infrastructure)</p>
+                        <p class="mt-4 text-gray-300">Developing a permanently staffed lunar outpost to leverage regolith for resource extraction and deep-space refueling.</p>
+                        <a href="#" class="mt-4 inline-block text-sky-400 font-medium hover:text-sky-300">View Details &rarr;</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="technology-section" class="py-20 bg-gray-800/90">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center mb-4 text-white">Advanced Space Technology</h2>
+                <p class="text-xl text-center mb-12 text-gray-400 max-w-3xl mx-auto">The breakthroughs that power our impossible journeys across the cosmos.</p>
+
+                <div class="flex flex-wrap -mx-4">
+                    <!-- Tech Feature 1 -->
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="p-8 bg-gray-900 rounded-lg shadow-xl border-t-4 border-sky-500 h-full">
+                            <div class="flex items-center mb-4">
+                                <span class="text-4xl text-sky-400 mr-4">🚀</span>
+                                <h3 class="text-2xl font-bold text-white">Quantum Drive Engine</h3>
+                            </div>
+                            <p class="text-gray-300">Our proprietary propulsion system drastically reduces travel time to outer planets, relying on advanced physics and high-density energy storage.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tech Feature 2 -->
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="p-8 bg-gray-900 rounded-lg shadow-xl border-t-4 border-sky-500 h-full">
+                            <div class="flex items-center mb-4">
+                                <span class="text-4xl text-sky-400 mr-4">🤖</span>
+                                <h3 class="text-2xl font-bold text-white">AI Habitat Management</h3>
+                            </div>
+                            <p class="text-gray-300">Self-regulating life support and structural integrity systems ensure astronaut safety and optimize resources in harsh off-world environments.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tech Feature 3 -->
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="p-8 bg-gray-900 rounded-lg shadow-xl border-t-4 border-sky-500 h-full">
+                            <div class="flex items-center mb-4">
+                                <span class="text-4xl text-sky-400 mr-4">📡</span>
+                                <h3 class="text-2xl font-bold text-white">Interstellar Comms</h3>
+                            </div>
+                            <p class="text-gray-300">A high-bandwidth, low-latency communication network using laser-relay technology for real-time data transmission across the solar system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Leadership Section (Refactored for Centering) -->
+        <section id="leadership-section" class="py-20 bg-gray-900/90 border-t border-b border-sky-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center mb-4 text-white">Pioneers of the Frontier</h2>
+                <p class="text-xl text-center mb-12 text-gray-400 max-w-5xl mx-auto">Our administrative team comprises the boldest minds in engineering, science, and strategy, guiding AstraCorp's vision across the cosmos and ensuring operational excellence.</p>
+
+                <!-- ROW 1: Leaders 1, 2, 3 (Standard 3-column grid on desktop) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Leader 1: CEO -->
+                    <div class="leader-card bg-gray-800 rounded-xl p-8 text-center border-t-4 border-sky-500">
+                        <!-- Placeholder Image/Icon -->
+                        <img src="./assets/Nayeem.jpg" alt="Nayeem" class="rounded-full w-32 h-32 mx-auto mb-4 border-4 border-sky-600 object-cover">
+                        <h3 class="text-2xl font-bold text-white mb-1">NAYEEM RAHMAN</h3>
+                        <p class="text-sky-400 font-semibold mb-3">Chief Executive Officer</p>
+                        <p class="text-gray-400 text-sm">Visionary leader focused on expanding AstraCorp's reach and securing interplanetary infrastructure contracts.</p>
+                    </div>
+                    
+                    <!-- Leader 2: Mission Architect -->
+                    <div class="leader-card bg-gray-800 rounded-xl p-8 text-center border-t-4 border-sky-500">
+                        <!-- Placeholder Image/Icon -->
+                        <img src="./assets/Sufian.jpg" alt="Sufian" class="rounded-full w-32 h-32 mx-auto mb-4 border-4 border-sky-600 object-cover">
+                        <h3 class="text-2xl font-bold text-white mb-1">ABU SUFIAN TALUKDAR</h3>
+                        <p class="text-sky-400 font-semibold mb-3">Chief Mission Architect</p>
+                        <p class="text-gray-400 text-sm">Retired deep-space pilot and tactical genius, overseeing mission planning and operational safety protocols.</p>
+                    </div>
+                    
+                    <!-- Leader 3: Chief Science Officer -->
+                    <div class="leader-card bg-gray-800 rounded-xl p-8 text-center border-t-4 border-sky-500">
+                        <!-- Placeholder Image/Icon -->
+                        <img src="./assets/Ornab.jpg" alt="Ornab" class="rounded-full w-32 h-32 mx-auto mb-4 border-4 border-sky-600 object-cover">
+                        <h3 class="text-2xl font-bold text-white mb-1">ORNAB BISWAS</h3>
+                        <p class="text-sky-400 font-semibold mb-3">Chief Science Officer</p>
+                        <p class="text-gray-400 text-sm">World-renowned astrophysicist directing all research and discovery efforts across all active space programs.</p>
+                    </div>
+                </div>
+
+                <!-- ROW 2: Leaders 4, 5 (Centered using Flexbox on desktop) -->
+                <!-- Use md:flex and md:justify-center to center the two remaining cards. -->
+                <div class="grid grid-cols-1 md:flex md:justify-center gap-8 mt-8">
+                    
+                    <!-- Leader 4: Chief Operations Officer (NEW) -->
+                    <div class="leader-card w-full md:max-w-sm bg-gray-800 rounded-xl p-8 text-center border-t-4 border-sky-500">
+                        <!-- Placeholder Image/Icon -->
+                        <img src="./assets/Tablik.jpg" alt="Tablik" class="rounded-full w-32 h-32 mx-auto mb-4 border-4 border-sky-600 object-cover">
+                        <h3 class="text-2xl font-bold text-white mb-1">TABLIK HOSSAIN</h3>
+                        <p class="text-sky-400 font-semibold mb-3">Chief Operations Officer</p>
+                        <p class="text-gray-400 text-sm">Manages the day-to-day logistics, supply chain, and ground-support infrastructure for all launches and expeditions.</p>
+                    </div>
+                    
+                    <!-- Leader 5: Chief Financial Officer (NEW) -->
+                    <div class="leader-card w-full md:max-w-sm bg-gray-800 rounded-xl p-8 text-center border-t-4 border-sky-500">
+                        <!-- Placeholder Image/Icon -->
+                        <img src="./assets/Miskat.jpg" alt="Miskat" class="rounded-full w-32 h-32 mx-auto mb-4 border-4 border-sky-600 object-cover">
+                        <h3 class="text-2xl font-bold text-white mb-1">MISKAT ZAMAN NIROB</h3>
+                        <p class="text-sky-400 font-semibold mb-3">Chief Financial Officer</p>
+                        <p class="text-gray-400 text-sm">Responsible for long-term fiscal strategy, budget allocation, and securing funding for next-generation technology development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Cost Calculator Section -->
+        <section id="cost-calculator-section" class="py-20 bg-gray-900/90 border-t border-b border-sky-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center mb-4 text-white">Mission Cost Estimator</h2>
+                <p class="text-xl text-center mb-12 text-gray-400 max-w-3xl mx-auto">Determine the preliminary expenditure for your interplanetary project.</p>
+
+                <div class="cockpit-panel rounded-2xl p-6 md:p-8">
+                    <form id="mission-cost-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            
+                            <!-- Mission Type Selector -->
+                            <div>
+                                <label for="mission-type" class="block text-sm font-medium text-sky-400 mb-2">Mission Target</label>
+                                <select id="mission-type" name="mission-type" required class="calculator-input w-full">
+                                    <option value="ares" class="bg-gray-800">Project Ares (Mars)</option>
+                                    <option value="europa" class="bg-gray-800">DeepDive-7 (Europa)</option>
+                                    <option value="luminaris" class="bg-gray-800">Luminaris Base (Lunar)</option>
+                                </select>
+                            </div>
+
+                            <!-- Duration Input -->
+                            <div>
+                                <label for="duration" class="block text-sm font-medium text-sky-400 mb-2">Duration (Years)</label>
+                                <input type="number" id="duration" name="duration" min="1" max="50" value="5" required class="calculator-input w-full" placeholder="e.g., 5">
+                            </div>
+
+                            <!-- Payload Mass Input -->
+                            <div>
+                                <label for="payload" class="block text-sm font-medium text-sky-400 mb-2">Payload Mass (1000s of kg)</label>
+                                <input type="number" id="payload" name="payload" min="1" max="1000" value="10" required class="calculator-input w-full" placeholder="e.g., 10">
+                            </div>
+                        </div>
+
+                        <!-- Calculation Button -->
+                        <div class="pt-4 text-center">
+                            <button type="submit" class="px-8 py-3 text-lg font-bold text-gray-900 bg-sky-400 rounded-lg hover:bg-sky-300 transition duration-300 shadow-xl shadow-sky-500/30 w-full md:w-auto">
+                                Calculate Estimated Cost
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Result Display Panel -->
+                    <div class="mt-8 pt-6 border-t border-sky-800">
+                        <h3 class="text-xl font-bold text-sky-400 mb-4 text-center">Estimated Project Cost</h3>
+                        <div class="data-unit rounded-xl p-6 text-center">
+                            <p id="cost-result-label" class="text-lg text-gray-400 mb-2">Select mission parameters and calculate.</p>
+                            <p id="cost-result" class="text-6xl font-mono digital-display text-green-400">
+                                0.00 <span class="text-3xl text-green-500 ml-2">BCR</span>
+                            </p>
+                            <p class="text-sm text-red-400 mt-4">BCR = Billion Credits (x $1,000,000,000)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Control Dashboard Section -->
+        <section id="dashboard-section" class="py-20 bg-gray-900/90 border-t border-b border-sky-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center mb-4 text-white">Project Starlight: Flight Control</h2>
+                <p class="text-xl text-center mb-12 text-gray-400 max-w-3xl mx-auto">Real-time status feed and pre-launch sequence monitoring. All systems nominal.</p>
+                
+                <!-- Cockpit Panel Container -->
+                <div class="cockpit-panel rounded-2xl p-6 md:p-12 max-w-7xl mx-auto">
+                    
+                    <!-- Dashboard Grid: Collapses from 3 columns to 1 on small screens -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        
+                        <!-- LEFT PANEL: Gauges and Indicators -->
+                        <div class="space-y-6">
+                            <h3 class="text-xl font-bold text-sky-400 border-b border-sky-700 pb-2">Primary Telemetry</h3>
+                            
+                            <!-- Gauge 1: Velocity -->
+                            <div class="data-unit rounded-lg p-4">
+                                <p class="text-xs uppercase text-gray-400 mb-1">Current Velocity (Km/s)</p>
+                                <div class="flex items-center space-x-3">
+                                    <div class="flex-grow h-4 bg-gray-700 rounded-full overflow-hidden">
+                                        <div id="velocity-gauge" class="h-full bg-green-500 shadow-lg shadow-green-500/50" style="width: 15%; transition: width 0.5s ease-out;"></div>
+                                    </div>
+                                    <span id="velocity-value" class="text-xl font-mono digital-display text-green-400">0.00</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Gauge 2: Power Level -->
+                            <div class="data-unit rounded-lg p-4">
+                                <p class="text-xs uppercase text-gray-400 mb-1">Reactor Core Power (%)</p>
+                                <div class="flex items-center space-x-3">
+                                    <div class="flex-grow h-4 bg-gray-700 rounded-full overflow-hidden">
+                                        <div id="power-gauge" class="h-full bg-yellow-500 shadow-lg shadow-yellow-500/50" style="width: 85%; transition: width 0.5s ease-out;"></div>
+                                    </div>
+                                    <span id="power-value" class="text-xl font-mono digital-display text-yellow-400">85%</span>
+                                </div>
+                            </div>
+
+                            <!-- Indicator Lights -->
+                            <div class="pt-4">
+                                <p class="text-sm uppercase text-gray-400 mb-2 border-b border-gray-700">System Status Check</p>
+                                <div class="flex space-x-4 flex-wrap">
+                                    <span id="sys-propulsion" class="text-green-500 font-bold text-lg flex items-center">
+                                        Propulsion <span class="ml-2 text-2xl">🟢</span>
+                                    </span>
+                                    <span id="sys-comms" class="text-green-500 font-bold text-lg flex items-center">
+                                        Comms <span class="ml-2 text-2xl">🟢</span>
+                                    </span>
+                                    <span id="sys-life" class="text-yellow-500 font-bold text-lg flex items-center">
+                                        Life Support <span class="ml-2 text-2xl">🟡</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- CENTER PANEL: Primary Countdown Display -->
+                        <div class="col-span-1 lg:col-span-1 text-center border-l border-r border-sky-800 lg:px-8 py-4 lg:py-0">
+                            <h3 class="text-xl font-bold text-red-500 mb-4 animate-pulse">PRIMARY T-MINUS</h3>
+
+                            <!-- Countdown Digits -->
+                            <div id="countdown-display" class="grid grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-3">
+                                <!-- Days -->
+                                <div class="p-2 rounded-lg bg-gray-900/70 border border-sky-800">
+                                    <div id="countdown-days" class="text-5xl lg:text-5xl xl:text-6xl font-mono digital-display text-sky-400">00</div>
+                                    <div class="mt-1 text-xs uppercase font-semibold text-gray-400">Days</div>
+                                </div>
+                                <!-- Hours -->
+                                <div class="p-2 rounded-lg bg-gray-900/70 border border-sky-800">
+                                    <div id="countdown-hours" class="text-5xl lg:text-5xl xl:text-6xl font-mono digital-display text-sky-400">00</div>
+                                    <div class="mt-1 text-xs uppercase font-semibold text-gray-400">Hours</div>
+                                </div>
+                                <!-- Minutes -->
+                                <div class="p-2 rounded-lg bg-gray-900/70 border border-sky-800">
+                                    <div id="countdown-minutes" class="text-5xl lg:text-5xl xl:text-6xl font-mono digital-display text-sky-400">00</div>
+                                    <div class="mt-1 text-xs uppercase font-semibold text-gray-400">Minutes</div>
+                                </div>
+                                <!-- Seconds -->
+                                <div class="p-2 rounded-lg bg-gray-900/70 border border-sky-800">
+                                    <div id="countdown-seconds" class="text-5xl lg:text-5xl xl:text-6xl font-mono digital-display text-sky-400">00</div>
+                                    <div class="mt-1 text-xs uppercase font-semibold text-gray-400">Seconds</div>
+                                </div>
+                            </div>
+
+                            <div id="launch-message" class="mt-6 text-center text-xl font-bold text-green-400 hidden">
+                                LAUNCH SEQUENCE INITIATED
+                            </div>
+
+                            <div class="mt-6">
+                                <p class="text-sm font-medium text-gray-300">Target: Starlight Alpha</p>
+                                <p class="text-sm font-medium text-white">Window: <span class="text-sky-300" id="target-date-display"></span></p>
+                            </div>
+                        </div>
+
+
+                        <!-- RIGHT PANEL: Telemetry Feed -->
+                        <div class="data-unit rounded-lg p-4 overflow-hidden h-64 lg:h-auto">
+                            <h3 class="text-xl font-bold text-sky-400 border-b border-sky-700 pb-2 mb-3">Telemetry Feed (LOG)</h3>
+                            <div id="telemetry-log" class="text-xs font-mono text-green-400 h-full max-h-48 lg:max-h-96 overflow-y-auto space-y-1 pr-2">
+                                <!-- Telemetry messages inserted by JS -->
+                                <p>[09:30:01] T-Checks: Propulsion systems reporting green.</p>
+                                <p>[09:30:05] T-Checks: Guidance system lock established (NAV-2). </p>
+                                <p>[09:30:12] Warning: Minor pressure fluctuation detected in O2 scrubbers. Status: Auto-correcting...</p>
+                                <p>[09:30:20] Command: Habitat external temperature nominal.</p>
+                                <p>[09:30:25] T-Checks: All primary flight controls confirmed READY.</p>
+                                <p>[09:30:31] System: Reactor power 85%. Stable.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Careers / Call to Action Section -->
+        <section id="careers-section" class="py-20 bg-gray-900/90">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="bg-gray-800 p-10 rounded-2xl shadow-2xl border border-sky-700">
+                    <h2 class="text-4xl font-extrabold mb-4 text-sky-400">Join the Mission</h2>
+                    <p class="text-xl text-gray-300 mb-8">We're looking for the boldest engineers, scientists, and visionaries to help us write the next chapter of human history.</p>
+                    <button class="px-8 py-3 text-lg font-bold text-gray-900 bg-sky-400 rounded-full hover:bg-sky-300 transition duration-300 shadow-xl">
+                        View Open Positions
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-sky-900 mt-10">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Agency Info -->
+                <div>
+                    <h3 class="text-xl font-bold text-sky-400 mb-4">QUANTUM-ORBITS</h3>
+                    <p class="text-sm text-gray-400">
+                        Headquarters: 6<sup>th</sup> Floor of Family Care Building<br>
+                        Est. 2020<br>
+                        Pioneering the Future.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#missions-section" class="scroll-link text-gray-400 hover:text-sky-300">Missions</a></li>
+                        <li><a href="#technology-section" class="scroll-link text-gray-400 hover:text-sky-300">Technology</a></li>
+                        <li><a href="#leadership-section" class="scroll-link text-gray-400 hover:text-sky-300">Leadership</a></li>
+                        <li><a href="#cost-calculator-section" class="scroll-link text-gray-400 hover:text-sky-300">Costing</a></li>
+                        <li><a href="#dashboard-section" class="scroll-link text-gray-400 hover:text-sky-300">Dashboard</a></li>
+                        <li><a href="#careers-section" class="scroll-link text-gray-400 hover:text-sky-300">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sky-300">Press Kit</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Contact</h3>
+                    <p class="text-sm text-gray-400">
+                        <a href="mailto:contact@astracorp.org" class="hover:text-sky-300">contact@quantumorbits.org</a><br>
+                        (555) 789-0123 (Emergency Mission Control)
+                    </p>
+                </div>
+                <!-- Social Media (Placeholder Icons) -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-sky-400 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.14 5.92 21.32 11.08 21.92V14.22H8.38V12H11.08V9.7C11.08 7.02 12.69 5.5 15.08 5.5C16.2 5.5 17.38 5.76 17.38 5.76V8.16H16.03C14.7 8.16 14.47 8.84 14.47 9.57V12H17.21L16.77 14.22H14.47V21.92C19.08 21.32 22 17.14 22 12C22 6.48 17.52 2 12 2Z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-sky-400 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M22 6.5C21.84 7.23 21.43 7.84 20.87 8.27C21.6 7.84 22.25 7.18 22.5 6.5C21.75 6.95 20.94 7.28 20.08 7.46C19.34 6.64 18.25 6.13 17.03 6.13C14.65 6.13 12.69 8.1 12.69 10.48C12.69 10.82 12.72 11.16 12.79 11.49C8.94 11.29 5.56 9.49 3.39 6.78C3.01 7.42 2.79 8.16 2.79 8.95C2.79 10.41 3.55 11.66 4.74 12.39C4.08 12.37 3.44 12.19 2.87 11.88V11.91C2.87 14.07 4.35 15.86 6.36 16.24C6.01 16.34 5.63 16.39 5.25 16.39C5 16.39 4.77 16.36 4.54 16.33C5.11 18.06 6.75 19.32 8.65 19.36C6.73 20.79 4.36 21.57 1.77 21.57C1.24 21.57 0.72 21.54 0.2 21.48C2.26 22.84 4.72 23.5 7.35 23.5C17.07 23.5 22.19 15.02 22.19 7.78C22.19 7.55 22.18 7.33 22.16 7.11C22.39 6.88 22.61 6.65 22.82 6.4Z"/></svg>
+                        </a>
+                        <!-- Add more social icons here (e.g., Instagram, LinkedIn) -->
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-4 border-t border-gray-700/50 text-center text-sm text-gray-500">
+                &copy; 2045 AstraCorp Space Agency. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

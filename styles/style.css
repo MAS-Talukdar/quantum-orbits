@@ -1,0 +1,186 @@
+        /* Custom font and base styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Share+Tech+Mono&display=swap');
+        
+        /* Configure Tailwind to use the Inter font */
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Subtle starry background for the entire body */
+        body {
+            background-color: #0d1117; /* Very dark blue/black */
+            color: #e5e7eb; /* Light gray text */
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 1%, transparent 60%),
+                              radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 1%, transparent 60%);
+        }
+
+        /* Styling for the mission cards */
+        .mission-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .mission-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.3), 0 10px 10px -5px rgba(59, 130, 246, 0.1);
+        }
+
+        /* Utility for smooth scrolling */
+        .scroll-link {
+            cursor: pointer;
+        }
+        
+        /* Custom styles for the digital cockpit display */
+        .digital-display {
+            font-family: 'Share Tech Mono', monospace; /* Use monospace for digital feel */
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.5); /* Blue glow */
+        }
+
+        /* Cockpit/Cost Panel styles */
+        .cockpit-panel {
+            background-color: #0c1524; /* Very dark, almost black blue */
+            border: 3px solid #1e3a8a; /* Dark blue border */
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.2); /* Soft blue outer glow */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle grid overlay for tech feel */
+        .cockpit-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, transparent 1px, #1e3a8a 1px), 
+                        linear-gradient(to bottom, transparent 1px, #1e3a8a 1px);
+            background-size: 25px 25px;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .data-unit {
+            background: #10192e; /* Slightly lighter background for data blocks */
+            border: 1px solid #1e40af;
+            box-shadow: inset 0 0 5px rgba(59, 130, 246, 0.2);
+        }
+        
+        /* Input styling */
+        .calculator-input {
+            background-color: #1a202c; /* Darker input background */
+            border: 1px solid #3b82f6; /* Blue border */
+            color: #e5e7eb; /* Light text */
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .calculator-input:focus {
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+            outline: none;
+        }
+        
+        /* --- ANIMATION CSS --- */
+        
+        /* Hero section specific styling for a subtle nebula effect */
+        #hero-section {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(13, 27, 42, 0.9)),
+                        url('https://placehold.co/1920x1080/0d1117/3b82f6?text=QUANTUM') no-repeat center center;
+            background-size: cover;
+            overflow: hidden; /* Important to hide the rocket outside the viewport */
+        }
+        
+        /* Rocket Styling and Animation */
+        .rocket {
+            position: absolute;
+            bottom: -150px; /* Start below the viewport */
+            left: 10%;
+            width: 50px;
+            height: 120px;
+            transform: rotate(-10deg); /* Slight tilt for dramatic launch */
+            animation: launch 15s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .rocket-body {
+            width: 100%;
+            height: 100%;
+            background: #e5e7eb; /* Silver/white */
+            border-radius: 50% 50% 0 0 / 10% 10% 0 0;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            /* Simple shape for a retro-future look */
+            clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+        }
+
+        .rocket-flame {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 60px;
+            background: radial-gradient(circle at 50% 100%, #ff8c00 10%, #ff4500 50%, #8b0000 100%);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+            animation: pulse 0.1s infinite alternate;
+        }
+
+        @keyframes launch {
+            0% { transform: translateY(0) rotate(-10deg); opacity: 0; }
+            5% { opacity: 1; }
+            40% { transform: translateY(-1500px) rotate(-10deg); opacity: 1; } /* Ascend */
+            45% { opacity: 0; }
+            100% { transform: translateY(-1500px) rotate(-10deg); opacity: 0; } /* Reset */
+        }
+
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scaleY(1); opacity: 0.9; }
+            100% { transform: translateX(-50%) scaleY(1.2); opacity: 1; }
+        }
+
+        /* Satellite / Space Station Animation (Subtle) */
+        .orbital-object {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            width: 60px;
+            height: 30px;
+            background: #3b82f6;
+            opacity: 0.2;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #3b82f6;
+            animation: orbit 40s linear infinite;
+            z-index: 5;
+            pointer-events: none;
+        }
+        .orbital-object::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -10px;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 50px;
+            background-color: #1e3a8a;
+            box-shadow: 0 0 5px #60a5fa;
+            transform: translateY(-50%) rotate(45deg); /* Antenna */
+        }
+
+        @keyframes orbit {
+            0% { transform: translateX(0) translateY(0) rotateZ(0deg); opacity: 0.2; }
+            25% { transform: translateX(-200px) translateY(50px) rotateZ(5deg); opacity: 0.3; }
+            50% { transform: translateX(-400px) translateY(0) rotateZ(-5deg); opacity: 0.2; }
+            75% { transform: translateX(-200px) translateY(-50px) rotateZ(0deg); opacity: 0.3; }
+            100% { transform: translateX(0) translateY(0) rotateZ(0deg); opacity: 0.2; }
+        }
+        
+        /* Styling for Leadership Cards */
+        .leader-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px -5px rgba(59, 130, 246, 0.4);
+        }
